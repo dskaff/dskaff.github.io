@@ -1,0 +1,153 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    height: 10vh;
+    background: linear-gradient(90deg, rgb(249, 193, 102) 0%, rgb(249, 193, 102) 4%,rgb(248, 174, 96) 4%, rgb(248, 174, 96) 38%,rgb(246, 156, 91) 38%, rgb(246, 156, 91) 41%,rgb(245, 137, 85) 41%, rgb(245, 137, 85) 44%,rgb(244, 118, 79) 44%, rgb(244, 118, 79) 71%,rgb(242, 100, 74) 71%, rgb(242, 100, 74) 74%,rgb(241, 81, 68) 74%, rgb(241, 81, 68) 100%);
+    position: sticky;
+    top: 0;
+}
+
+nav h1 {
+    color: white;
+    position: absolute;
+    width: 50%;
+    font-size: 30px;
+    top: 30%;
+    left: 2%;
+    opacity: 0;
+}
+
+nav h1.appear {
+    opacity: 1;
+}
+
+.menu-links {
+    display: flex;
+    list-style: none;
+    width: 50%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+}
+
+.tab {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 20%;
+}
+
+header {
+    background-color: rgb(253,253,253);
+    color: rgb(32, 35, 48);
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.welcome h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.welcome h2 {
+    font-size: 22px;
+}
+
+.arrow {
+    background-color: rgb(253,253,253);
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+img {
+    width: 10%;
+    height: 40%;
+    object-fit: cover;
+}
+
+section {
+    height: 100vh;
+}
+
+@media screen and (max-width: 800px){
+
+    .line {
+        position: sticky;
+        top: 0;
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 5px;
+    }
+
+    .menu {
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+    }
+
+    .menu-links {
+        position: fixed;
+        background: linear-gradient(90deg, rgb(249, 193, 102) 0%, rgb(249, 193, 102) 4%,rgb(248, 174, 96) 4%, rgb(248, 174, 96) 38%,rgb(246, 156, 91) 38%, rgb(246, 156, 91) 41%,rgb(245, 137, 85) 41%, rgb(245, 137, 85) 44%,rgb(244, 118, 79) 44%, rgb(244, 118, 79) 71%,rgb(242, 100, 74) 71%, rgb(242, 100, 74) 74%,rgb(241, 81, 68) 74%, rgb(241, 81, 68) 100%);
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(10px at 95% -5%);
+        -webkit-clip-path: circle(10px at 95% -5%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+
+    .menu-links.open {
+        clip-path: circle(1500px at 95% -5%);
+        -webkit-clip-path: circle(1500px at 95% -5%);
+        pointer-events: all;
+    }
+
+    .menu-links li {
+        opacity: 0;
+    }
+    .tab {
+        font-size: 25px;
+    }
+    .menu-links li:nth-child(1) {
+        transition: all 0.5s ease-out 0.1s;
+    }
+    .menu-links li:nth-child(2) {
+        transition: all 0.5s ease-out 0.2s;
+    }
+    .menu-links li:nth-child(3) {
+        transition: all 0.5s ease-out 0.3s;
+    }
+    .menu-links li:nth-child(4) {
+        transition: all 0.5s ease-out 0.4s;
+    }
+    .menu-links li:nth-child(5) {
+        transition: all 0.5s ease-out 0.5s;
+    }
+    .menu-links li.fade {
+        opacity: 1;
+    }
+    
+}
